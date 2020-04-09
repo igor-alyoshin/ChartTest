@@ -1,0 +1,2 @@
+rootProject.name='ChartTest'
+include ':app'

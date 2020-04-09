@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">ChartTest</string>
+    <string name="start">Start</string>
+    <string name="save_to_file">Save to file</string>
+    <string name="enter_number_of_points">Enter number of points</string>
+    <string name="x_format" translatable="false">X: %f</string>
+    <string name="y_format" translatable="false">Y: %f</string>
+</resources>
