@@ -33,7 +33,7 @@ class ChartFragment : BaseFragment<ChartFragmentBinding>() {
         val points: List<Point> =
             arguments?.getParcelableArrayList(ARG_POINTS) ?: emptyList()
         withNotNull(binding) {
-            chart.setPoints(points.map { Pair(it.x, it.y) })
+            chart.setPoints(points.sortedBy { it.x }.map { Pair(it.x, it.y) })
             with(recyclerView) {
                 layoutManager =
                     GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)

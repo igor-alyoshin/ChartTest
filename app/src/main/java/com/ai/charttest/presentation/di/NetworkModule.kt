@@ -1,6 +1,9 @@
 package com.ai.charttest.presentation.di
 
 import android.annotation.SuppressLint
+import android.view.View
+import android.view.ViewGroup
+import android.widget.BaseAdapter
 import com.ai.charttest.R
 import com.ai.charttest.data.RestApi
 import com.ai.charttest.presentation.utils.getString
@@ -11,7 +14,6 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.scalars.ScalarsConverterFactory
 import java.security.SecureRandom
-import java.security.cert.CertificateException
 import java.security.cert.X509Certificate
 import java.util.concurrent.TimeUnit
 import javax.net.ssl.SSLContext
@@ -25,12 +27,10 @@ val networkModule = module {
             override fun getAcceptedIssuers(): Array<X509Certificate> = arrayOf()
 
             @SuppressLint("TrustAllX509TrustManager")
-            @Throws(CertificateException::class)
             override fun checkClientTrusted(chain: Array<X509Certificate>, authType: String) {
             }
 
             @SuppressLint("TrustAllX509TrustManager")
-            @Throws(CertificateException::class)
             override fun checkServerTrusted(chain: Array<X509Certificate>, authType: String) {
             }
         })

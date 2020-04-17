@@ -19,9 +19,7 @@ import androidx.core.animation.addListener
 import androidx.core.os.bundleOf
 
 
-class Chart @JvmOverloads constructor(
-    context: Context, attrs: AttributeSet? = null
-) : View(context, attrs) {
+class Chart(context: Context, attrs: AttributeSet? = null) : View(context, attrs) {
 
     private val paint = Paint().apply {
         color = Color.BLACK
