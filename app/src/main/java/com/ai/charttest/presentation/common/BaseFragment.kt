@@ -40,7 +40,7 @@ abstract class BaseFragment<T : ViewDataBinding> : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = bind(inflater, container)
-        binding?.lifecycleOwner = this
+        binding?.lifecycleOwner = viewLifecycleOwner
         return binding?.root
     }
 

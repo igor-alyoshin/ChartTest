@@ -73,8 +73,6 @@ class ChartFragment : BaseFragment<ChartFragmentBinding>() {
     }
 
     companion object {
-        private const val MIN_ZOOM = 1f
-
         const val ARG_POINTS = "ARG_POINTS"
     }
 }
